@@ -4,8 +4,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCharacter = styled.div`
-font-weight: bold;
-color: orange;
+.characterName {
+    font-weight: bold;
+    color: #D6E1EB;
+    align-items: center;
+}
+
+.characterBorn {
+    color: #CEB598;
+}
+
+hr {
+    width: 75%;
+}
+
 `
 
 const Character = props => {
@@ -13,8 +25,9 @@ const Character = props => {
     return (
         <StyledCharacter>
         <div>
-            <p className="characterName">{character.name}</p>
-            <p className="characterBorn">{character.birth_year}</p>
+            <div className="characterName">{character.name}</div>
+            <div className="characterBorn">Born: {character.birth_year}</div>
+            <hr />
         </div>
         </StyledCharacter>
     )
